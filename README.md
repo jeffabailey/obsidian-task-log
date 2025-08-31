@@ -2,6 +2,8 @@
 
 A TypeScript-based Obsidian plugin that automatically logs completed tasks to a configurable file. The plugin monitors file changes and detects when tasks are marked as complete, then logs them with detailed information.
 
+![alt text](screenshot.png)
+
 ## Features
 
 - **Automatic Task Detection**: Monitors markdown files for completed tasks (marked with `- [x]` or `- [X]`)
@@ -34,11 +36,10 @@ The plugin provides several configuration options accessible through Obsidian's 
 
 - **Enable Task Logging**: Toggle the plugin on/off
 - **Log File Name**: Name of the file where completed tasks will be logged (default: `task-log.md`)
-- **Log Directory**: Directory where the log file will be stored (optional)
+- **Log Directory**: Directory where the log file will be stored. Leave empty for vault root, or enter a relative path (e.g., "logs/") or absolute path (e.g., "/Users/username/Documents/logs")
 
 ### Advanced Settings
 
-- **Use Relative Path**: Store log file relative to vault root (recommended)
 - **Include Timestamp**: Add completion timestamp to log entries
 - **Include Source File**: Include source file information in log entries
 
@@ -141,10 +142,13 @@ Tasks are considered complete when the checkbox is marked with either `x` or `X`
 
 ## Log File Location
 
-By default, the log file is created in your vault root directory. You can configure:
+By default, the log file is created in your vault root directory. You can configure the location by entering a path in the Log Directory setting:
 
+- **Empty**: Store in vault root (e.g., `task-log.md`)
 - **Relative Path**: Store within your vault (e.g., `logs/task-log.md`)
-- **Absolute Path**: Store outside your vault (e.g., `/Users/username/Documents/task-log.md`)
+- **Absolute Path**: Store outside your vault (e.g., `/Users/username/Documents/logs/task-log.md`)
+
+The plugin automatically detects whether you've entered a relative or absolute path, so you don't need to specify which type you're using.
 
 ## Contributing
 

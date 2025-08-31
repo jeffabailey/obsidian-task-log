@@ -3,8 +3,9 @@
   "name": "Task Log",
   "version": "1.0.0",
   "minAppVersion": "0.15.0",
-  "description": "Logs completed tasks to a configurable file",
-  "author": "Your Name",
-  "authorUrl": "https://github.com/yourusername",
+  "description": "Automatically log completed tasks to a configurable file with timestamps and source information",
+  "author": "Jeff Bailey",
+  "authorUrl": "https://github.com/jeffbailey",
+  "fundingUrl": "https://github.com/sponsors/jeffbailey",
   "isDesktopOnly": false
 }
