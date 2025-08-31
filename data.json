@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "logFileName": "task-log.md",
+  "logDirectory": "",
+  "includeTimestamp": true,
+  "includeSourceFile": true,
+  "dateFormat": "YYYY-MM-DD h:mm A TZ",
+  "customDateFormat": "YYYY-MM-DD h:mm A TZ"
+}
