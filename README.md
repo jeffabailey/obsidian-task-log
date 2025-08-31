@@ -96,23 +96,45 @@ tests/
 ├── main.test.ts         # Main plugin tests
 ├── settings.test.ts     # Settings tests
 ├── task-detector.test.ts # Task detector tests
-└── task-logger.test.ts  # Task logger tests
+├── task-logger.test.ts  # Task logger tests
+└── e2e/                 # End-to-end tests
+    ├── global-setup.ts  # Test environment setup
+    ├── global-teardown.ts # Test cleanup
+    ├── obsidian-helper.ts # Obsidian testing utilities
+    ├── task-logging.spec.ts # Core functionality tests
+    ├── plugin-functionality.spec.ts # Plugin logic tests
+    └── sandbox-vault/   # Test vault with sample data
 ```
 
 ### Testing
 
-The plugin includes comprehensive tests with Jest and maintains at least 80% test coverage:
+The plugin includes comprehensive testing with multiple approaches:
 
-- **Unit Tests**: Test individual components in isolation
+#### **Unit Tests (Jest)**
+- **Fast feedback**: Test individual components in isolation
 - **Mock Obsidian API**: Simulate Obsidian environment for testing
 - **Coverage Reporting**: Detailed coverage reports for all source files
 
-Run tests with:
+Run unit tests with:
 ```bash
 npm test              # Run all tests
 npm run test:watch    # Run tests in watch mode
 npm run test:coverage # Run tests with coverage report
 ```
+
+#### **End-to-End Tests (Playwright)**
+- **Real functionality**: Test plugin logic in browser environment
+- **Core logic validation**: Verify task detection and log formatting
+- **Settings testing**: Test different configuration combinations
+
+Run E2E tests with:
+```bash
+npm run test:e2e        # Run all E2E tests
+npm run test:e2e:ui    # Interactive UI mode
+npm run test:e2e:debug # Debug mode for troubleshooting
+```
+
+**Test Coverage**: Maintains at least 80% coverage across all test types
 
 ### Building
 
